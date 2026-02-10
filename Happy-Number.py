@@ -1,14 +1,14 @@
-1class Solution:
-2    def isHappy(self, n: int) -> bool:
-3        def divideNumber(num):
-4            digits = []
-5            while num > 0:
-6                digits.append(num%10)
-7                num //=10
-8            return digits
-9        while n >6:
-10            n = sum(x**2 for x in divideNumber(n))
-11        if n == 1:
-12            return True
-13        else: 
-14            return False
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        def divideNumber(num):
+            digits = []
+            while num > 0:
+                digits.append(num%10)
+                num //=10
+            return digits
+        while n >6:
+            n = sum(x**2 for x in divideNumber(n))
+        if n == 1:
+            return True
+        else: 
+            return False
