@@ -1,8 +1,7 @@
-1class Solution:
-2    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-3        h = defaultdict(list)
-4        for i in strs:
-5            k = tuple(sorted(i))
-6            h[k].append(i)
-7        return list(h.values())
-8
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        h = defaultdict(list)
+        for i in strs:
+            k = tuple(sorted(i))
+            h[k].append(i)
+        return list(h.values())
