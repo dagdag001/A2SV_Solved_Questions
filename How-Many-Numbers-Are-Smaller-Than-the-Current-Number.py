@@ -1,11 +1,10 @@
-1class Solution:
-2    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
-3        rank = {}
-4        sortNums = sorted(nums)
-5        for i, val in enumerate(sortNums):
-6            if val not in rank:
-7                rank[val] = i
-8
-9        return [rank[x] for x in nums]
-10
-11
+from typing import List
+
+class Solution:
+	def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+		rank = {}
+		sortNums = sorted(nums)
+		for i, val in enumerate(sortNums):
+			if val not in rank:
+				rank[val] = i
+		return [rank[x] for x in nums]
