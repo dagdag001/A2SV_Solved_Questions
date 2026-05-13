@@ -14,6 +14,6 @@ class Solution:
             return 1 + self.minDepth(root.left)
         if not root.left:
             return 1 + self.minDepth(root.right)
-        return 1 + min(self.minDepth(root.left), self.minDepth(root.right) )
+        return 1 + min(self.minDepth(root.left), self.minDepth(root.right))
         
         
